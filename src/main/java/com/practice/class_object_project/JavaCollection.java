@@ -8,6 +8,11 @@ public class JavaCollection {
         studentName[0] = "samrat";
         studentName[1] = "shanto";
 
+        Integer[] arr =  { 10, 4, 2, 77, 8, 1};
+        Arrays.sort(arr);
+        for(Integer i: arr) System.out.print(i+" ");
+        System.out.println();
+
         //JAVA Collections
         //ArrayList
         List<String> list1 = new ArrayList<>();
@@ -18,11 +23,12 @@ public class JavaCollection {
         list1.add("cde");
         list1.add("cde");
 
-        list1.get(3);//get value of index 3
+        System.out.println(list1.get(3));//get value of index 3
         System.out.println(list1.contains("abc")); //returns bool value
 
         list1.remove(String.valueOf("abc")); //remove
         list1.remove(2); //remove using index
+
 
         //iterator
         Iterator<String> it = list1.iterator();
@@ -51,21 +57,27 @@ public class JavaCollection {
 
 
         //Vector which have many extra methods
-        Vector<Integer> v = new Vector<Integer>();
+        List<Integer> v = new Vector<Integer>();
         v.add(2);
         v.add(4);
         v.add(25);
         v.add(267);
         v.add(1);
+        v.add(1);
+        v.add(1);
 
-        //sorting
-        // v.sort();
+        //min max frequency sort
+        System.out.println("Min: " + Collections.min(v));
+        System.out.println("Max " + Collections.max(v));
+        System.out.println("Frequency of 1: " + Collections.frequency(v, 1));// there are 3---- 1
+
+        Collections.sort(v);  //sorting
+
         System.out.println("Vector: ");
-        Iterator<Integer> it3 = v.iterator();
-        while (it3.hasNext()) {
-            System.out.println(it3.next());
-        }
-
+        System.out.println(v);
+        //sorting reverse ordered
+        Collections.sort(v, Comparator.reverseOrder());
+        System.out.println("Max to min sorting: " + v);
 
         //stack
         Stack<Integer> stack = new Stack<>();

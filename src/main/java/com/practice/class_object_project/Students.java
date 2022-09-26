@@ -2,7 +2,7 @@ package com.practice.class_object_project;
 
 import java.util.Objects;
 
-public class Students {
+public class Students implements Comparable<Students> {
     private int roll;
     private String name;
 
@@ -30,6 +30,8 @@ public class Students {
         this.name = name;
     }
 
+
+
     // hash obj convert to string
     @Override
     public String toString() {
@@ -51,5 +53,10 @@ public class Students {
     @Override
     public int hashCode() {
         return Objects.hash(getRoll());
+    }
+
+    @Override
+    public int compareTo(Students that) {
+        return this.roll - that.roll; //compare using roll attribute
     }
 }

@@ -101,7 +101,7 @@ public class OOP {
 
         System.out.println();
 
-        //polymorphism
+        //polymorphism overloading compile time
         student3.printInfo(20);
         student3.printInfo("polymorphism");
         student3.printInfo(12, "compile time", 4);

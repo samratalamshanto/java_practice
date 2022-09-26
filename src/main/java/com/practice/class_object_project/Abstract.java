@@ -1,6 +1,6 @@
 package com.practice.class_object_project;
 
-abstract class Animal { //abstract class
+abstract class Animal { //abstract class //can not create object of abstract class
     abstract void walk(); //abstract method
 
     public void eat() {
